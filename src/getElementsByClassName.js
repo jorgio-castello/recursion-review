@@ -13,15 +13,17 @@ var getElementsByClassName = function(className
   //declare inner function - getChildNodes
   let getChildNodes = function (nodes) {
     //Loop through the nodes
-    nodes = Array.from(nodes);
+    nodes = Array.from(nodes.childNodes);
     nodes.forEach(node => {
       //If the node has the className,
-      if (node.classList.value === className) {
+      if (_.contains(node.classList, className)) {
         //if true: push it into resultArr
         resultArr.push(node);
       }
       //call the getChildNodes on each node
-      return getChildNodes(node.childNodes);
+      if(node.childNodes) {
+        return getChildNodes(node);
+      }
     });
   };
 
