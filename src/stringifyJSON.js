@@ -38,7 +38,7 @@ var stringifyJSON = function(obj) {
     // Loop through obj
     for (var key in obj) {
       // if type of the obj is a function or is undefined
-        // continue
+      // continue
       if (typeof obj[key] === 'function' || obj[key] === undefined) {
         continue;
       }
@@ -49,13 +49,9 @@ var stringifyJSON = function(obj) {
       var valueString = stringifyJSON(obj[key]);
       objStringArray.push(keyString + ':' + valueString);
     }
-
-  // array.push(stringifyJSON(key) + ':' + stringifyJSON(obj[key]))
+    // array.push(stringifyJSON(key) + ':' + stringifyJSON(obj[key]))
     return '{' + objStringArray.join(',') + '}';
   }
-
-  // "{ 'key' : 'value'}"
-
 
   // Make obj into string version
   return '' + obj;
