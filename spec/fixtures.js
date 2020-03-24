@@ -39,12 +39,17 @@ unstringifiableValues = [
 
 parseableStrings = [
   // basic stuff
+  '[[[["foo"]]]]',
+  '[[[[]]]]',
+  '[[[[]]]]',
   '9000',
   '"hello"',
   'true',
   'false',
   'null',
   '[]',
+  '["a"]',
+  '[[]]',
   '{"foo": ""}',
   '{}',
   '{"foo": "bar"}',
