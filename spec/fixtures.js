@@ -1,4 +1,4 @@
-var FILL_ME_IN = 'Fill me in.';
+var FILL_ME_IN = true;
 
 var validStrings, invalidStrings, // used for stringifyJSON and parseJSON specs
   weirdObjects; // used for stringifyJSON spec
@@ -39,6 +39,11 @@ unstringifiableValues = [
 
 parseableStrings = [
   // basic stuff
+  '9000',
+  '"hello"',
+  'true',
+  'false',
+  'null',
   '[]',
   '{"foo": ""}',
   '{}',
